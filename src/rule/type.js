@@ -81,9 +81,10 @@ function type(rule, value, source, errors, options) {
       errors.push(util.format(options.messages.types[ruleType], rule.fullField, rule.type));
     }
     // straight typeof check
-  } else if (ruleType && typeof (value) !== rule.type) {
-    errors.push(util.format(options.messages.types[ruleType], rule.fullField, rule.type));
   }
+  // else if (ruleType && typeof (value) !== rule.type) {
+  //   errors.push(util.format(options.messages.types[ruleType], rule.fullField, rule.type));
+  // }
 }
 
 export default type;
